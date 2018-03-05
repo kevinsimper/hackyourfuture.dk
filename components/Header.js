@@ -7,25 +7,35 @@ export default () => {
             min-height: 65px;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid #333;
+            border-bottom: 2px solid #b8c1cb;
             background: white;
             padding: 0 20px;
           }
           .HeaderLink {
             margin: 0 10px;
             text-decoration: none;
-            text-transform: uppercase;
           }
           .HeaderLink:hover {
             text-decoration: underline;
           }
+          .logo {
+            height: 40px;
+            margin-right: 30px;
+          }
         `}
       </style>
+      <img src="/static/hackyourfuture.png" className="logo" />
       <a href="/" className="HeaderLink">
         Home
       </a>
+      <a href="/about" className="HeaderLink">
+        About
+      </a>
       <a href="http://hackyourfuture.net/apply" className="HeaderLink">
         Apply
+      </a>
+      <a href="/learn" className="HeaderLink">
+        Learn
       </a>
       <a href="http://hackyourfuture.net/index#contact" className="HeaderLink">
         Contact
