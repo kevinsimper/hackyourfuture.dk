@@ -1,15 +1,22 @@
 import Head from 'next/head'
-import Header from '../components/Header'
-import MobileMenu from '../components/MobileMenu'
-import Team from '../components/Team'
+import Team from '../components/Team/'
 import Layout from '../components/Layout'
+import Content from '../components/Content'
+import marked from 'marked'
+
+const content = `
+HackYourFuture is an educational program that aims to train refugees and asylum seekers to become web-developers and empower them by opening the doors to a very in-demand job market.
+
+In our free 6-month program we train refugees, asylum seekers and people with limited access to further education in modern JavaScript software development. Our aim is to have our students land their first software development job after finishing our course. We achieve this by not only teaching them relevant frameworks, but also by preparing them for a job market that requires independent problem solving and continuous self-development. After completion of our program we guide students towards work via our network. With our team of experienced professional developers we have created a curriculum around the needs of non-western students. Our teachers are all volunteers and extremely passionate about coding.
+
+We believe talented refugees are a great opportunity for society and we are here to give them a helping hand to make use of their potential.
+`
 
 export default () => {
   return (
     <Layout>
       <Head>
         <title>HackYourFuture Copenhagen</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <style jsx>
         {`
@@ -43,11 +50,13 @@ export default () => {
             padding: 50px;
           }
           .Background {
-            background-image: url('https://images.unsplash.com/photo-1515518554912-63b4da53597d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bbe35f46b5bd2640063b8516b2655c33&auto=format&fit=crop&w=2850&q=80');
+            background: linear-gradient( rgba(255, 0, 0, 0.35), rgba(255, 0, 0, 0.55) ), url(https://images.unsplash.com/photo-1515518554912-63b4da53597d?ixlib=rb-0.3.5…EyMDd9&s=bbe35f4…&auto=format&fit=crop&w=2850&q=80);
             background-size: contain;
             background-repeat: no-repeat;
             background-size: 200%;
-            padding-bottom: 40px;
+            height: 50vw;
+            max-height: 50vh;
+            min-height: 300px;
           }
           @media (min-width: 768px) {
             .Background {
@@ -56,54 +65,30 @@ export default () => {
           }
         `}
       </style>
-      <link
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
-        rel="stylesheet"
-      />
-      <Header />
-      <MobileMenu />
       <div className="Background">
         <div className="logo">
           <img src="/static/hackyourfuture.png" style={{ height: 200 }} />
         </div>
-        <div className="content">
-          <p>
-            HackYourFuture is a non-profit that aims to train refugees and
-            asylum seekers to become web-developers and empower them by opening
-            the doors to a very in-demand job market.
-          </p>
-          <p>
-            In our 6-month program we train students with and without a coding
-            background in modern JavaScript software development. Our aim is to
-            have our students land their first software development job after
-            finishing our course and we do everything we can to prepare them as
-            well as possible. With our team of experienced senior developers we
-            have created a program around the special needs of refugees. Our
-            teachers are all volunteers and extremely passionate about coding.
-          </p>
-          <p>
-            We believe talented refugees are a great opportunity for society and
-            we are here to give them a helping hand to make use of their
-            potential.
-          </p>
-          <p>- Christopher Klüter</p>
-        </div>
       </div>
-      <div style={{ height: 100 }} />
+      <Content>
+        <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
+      </Content>
+      <div style={{ height: 50 }} />
       <div className="contentExtra">
         <h2>Find us on Social Media</h2>
         <div className="facebook">
           <iframe
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhackyourfuturecopenhagen%2F&tabs=timeline&width=360&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1094159287288856"
-            width="360"
-            height="500"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhackyourfuturecopenhagen%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=452614524799595"
+            width="340"
+            height="214"
             styles={{ border: 'none', overflow: 'hidden' }}
             scrolling="no"
             frameBorder="0"
           />
         </div>
       </div>
-      <Team/>
+      <h2 style={{ textAlign: 'center' }}>The team</h2>
+      <Team />
     </Layout>
   )
 }
