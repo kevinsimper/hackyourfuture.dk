@@ -1,6 +1,14 @@
-export default ({children}) => {
+import Head from 'next/head'
+import Header from './Header'
+import Footer from './Footer'
+import MobileMenu from './MobileMenu'
+
+export default ({ children }) => {
   return (
     <div>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <style global jsx>{`
         body {
           font-size: 1.2rem;
@@ -8,8 +16,7 @@ export default ({children}) => {
           font-family: 'Source Sans Pro', sans-serif;
           margin: 0px;
           color: #111;
-          background-color: #f5f5f5 !important;
-          padding-bottom: 100px;
+          background-color: #fff !importan  t;
         }
         img {
           max-width: 100%;
@@ -21,7 +28,14 @@ export default ({children}) => {
           box-sizing: border-box;
         }
       `}</style>
+      <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+        rel="stylesheet"
+      />
+      <Header />
+      <MobileMenu />
       {children}
+      <Footer />
     </div>
   )
 }
