@@ -53,22 +53,47 @@ export default () => {
           }
         `}
       </style>
-      {data.sort((a, b) => { return b.photo.length - a.photo.length}).map((item, key) => {
-        return (
-          <div className={'mentor'} key={key}>
-            <div className='image'>
-              {item.photo ? <img src={item.photo}/> : <img src={'/static/hackyourfuture.png'} style={{width: '150%', maxWidth: '150%'}} />}
-            </div>
-            <div className="mentorName">
-              {item.name}
-              <div>
-                {item.github && <a href={item.github}><img style={{width: 33, padding: 3, opacity: 0.5}} src='https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg' alt='Github'/></a>}
-                {item.linkedin && <a href={item.linkedin}><img style={{width: 33, padding: 3, opacity: 0.5}} src='https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg' alt='Linkedin'/></a>}
+      {data
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map((item, key) => {
+          return (
+            <div className={'mentor'} key={key}>
+              <div className="image">
+                {item.photo ? (
+                  <img src={item.photo} />
+                ) : (
+                  <img
+                    src={'/static/hackyourfuture.png'}
+                    style={{ width: '150%', maxWidth: '150%' }}
+                  />
+                )}
+              </div>
+              <div className="mentorName">
+                {item.name}
+                <div>
+                  {item.github && (
+                    <a href={item.github}>
+                      <img
+                        style={{ width: 33, padding: 3, opacity: 0.5 }}
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
+                        alt="Github"
+                      />
+                    </a>
+                  )}
+                  {item.linkedin && (
+                    <a href={item.linkedin}>
+                      <img
+                        style={{ width: 33, padding: 3, opacity: 0.5 }}
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg"
+                        alt="Linkedin"
+                      />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        )
-      })}
+          )
+        })}
     </div>
   )
 }
