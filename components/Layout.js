@@ -16,7 +16,7 @@ export default ({ children }) => {
           font-family: 'Source Sans Pro', sans-serif;
           margin: 0px;
           color: #111;
-          background-color: #fff !importan  t;
+          background-color: #fff !important;
         }
         img {
           max-width: 100%;
