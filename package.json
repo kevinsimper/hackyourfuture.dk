@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build && next export",
     "start": "next start",
-    "fix-lint": "npx prettier --write --single-quote --no-semi **/*.js",
+    "fix-lint": "npx prettier --write --single-quote --no-semi 'components/**/*.js' 'pages/**/*.js'",
     "deploy": "npm run build && npx surge out/ hackyourfuture.dk"
   },
   "repository": {
