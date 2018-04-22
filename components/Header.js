@@ -39,6 +39,9 @@ export default () => {
         <a href="/learn" className="HeaderLink">
           Learn
         </a>
+        <a href="/support-us" className="HeaderLink">
+          Support us
+        </a>
         <a href="/contact" className="HeaderLink">
           Contact
         </a>
