@@ -34,6 +34,21 @@ export default ({ children }) => {
       <Header />
       {children}
       <Footer />
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-117911945-1"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117911945-1');
+          `
+        }}
+      />
     </div>
   )
 }
