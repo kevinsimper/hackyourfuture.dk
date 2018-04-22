@@ -36,7 +36,7 @@ export default () => {
             z-index: 1;
             cursor: pointer;
           }
-          @media (min-width: 760px) {
+          @media (min-width: 900px) {
             .navigation {
               display: block;
             }
