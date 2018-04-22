@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
-import MobileMenu from './MobileMenu'
 
 export default ({ children }) => {
   return (
@@ -33,7 +32,6 @@ export default ({ children }) => {
         rel="stylesheet"
       />
       <Header />
-      <MobileMenu />
       {children}
       <Footer />
     </div>

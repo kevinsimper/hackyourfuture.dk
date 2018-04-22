@@ -1,9 +1,11 @@
+import { links } from './Navigation'
+
 export default () => {
   return (
-    <div className="mobile-menu">
+    <div className="mobilemenu" id="mobilemenu">
       <style jsx>
         {`
-          .mobile-menu {
+          .mobilemenu {
             display: none;
             position: absolute;
             top: 0px;
@@ -13,14 +15,24 @@ export default () => {
             bottom: 0px;
             padding: 20px;
           }
-          .mobile-menu a {
+          .mobilemenu a {
             display: block;
+            font-size: 2rem;
+            line-height: 3rem;
+            text-decoration: none;
+          }
+          .showmenu {
+            display: block !important;
           }
         `}
       </style>
-      <a href="/">Home</a>
-      <a href="http://hackyourfuture.net/apply">Apply</a>
-      <a href="http://hackyourfuture.net/index#contact">Contact</a>
+      <div>
+        {links.map((link, key) => (
+          <a href={link[1]} className="HeaderLink" key={key}>
+            {link[0]}
+          </a>
+        ))}
+      </div>
     </div>
   )
 }
