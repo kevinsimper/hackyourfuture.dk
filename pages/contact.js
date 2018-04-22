@@ -3,6 +3,7 @@ import marked from 'marked'
 import Layout from '../components/Layout'
 import Content from '../components/Content'
 import Contactform from '../components/Contactform'
+import Map from '../components/Map'
 
 let content = `
 # Contact us
@@ -22,6 +23,9 @@ export default () => (
     <Content>
       <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
       <Contactform email={'christopher@hackyourfuture.net'} />
+      <div style={{ marginTop: 40 }}>
+        <Map />
+      </div>
     </Content>
   </Layout>
 )

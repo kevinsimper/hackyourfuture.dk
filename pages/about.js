@@ -2,6 +2,7 @@ import Head from 'next/head'
 import marked from 'marked'
 import Layout from '../components/Layout'
 import Content from '../components/Content'
+import Map from '../components/Map'
 
 let content = `
 # About Us
@@ -48,6 +49,7 @@ export default () => {
       </Head>
       <Content>
         <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
+        <Map />
       </Content>
     </Layout>
   )
