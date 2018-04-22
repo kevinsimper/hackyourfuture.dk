@@ -1,3 +1,5 @@
+import { links } from './Navigation'
+
 export default () => {
   return (
     <div className="header">
@@ -27,24 +29,11 @@ export default () => {
       </style>
       <img src="/static/hackyourfuture.png" className="logo" />
       <div>
-        <a href="/" className="HeaderLink">
-          Home
-        </a>
-        <a href="/about" className="HeaderLink">
-          About
-        </a>
-        <a href="/apply" className="HeaderLink">
-          Apply
-        </a>
-        <a href="/learn" className="HeaderLink">
-          Learn
-        </a>
-        <a href="/support-us" className="HeaderLink">
-          Support us
-        </a>
-        <a href="/contact" className="HeaderLink">
-          Contact
-        </a>
+        {links.map((link, key) => (
+          <a href={link[1]} className="HeaderLink" key={key}>
+            {link[0]}
+          </a>
+        ))}
       </div>
     </div>
   )
