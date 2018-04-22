@@ -3,6 +3,7 @@ export const links = [
   ['About', '/about'],
   ['Apply', '/apply'],
   ['Learn', '/learn'],
+  ['Mentors', '/mentors'],
   ['Support us', '/support-us'],
   ['Contact', '/contact']
 ]
