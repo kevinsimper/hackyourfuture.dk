@@ -1,8 +1,11 @@
 const sponsers = [
-  'tuborgfond.png',
-  'foreningen_orange.png',
-  'zibragroup.png',
-  'koebenhavns-kommune.png'
+  ['tuborgfond.png', 'http://www.tuborgfondet.dk/'],
+  ['foreningen_orange.png', 'https://roskildefestivalgruppen.dk/'],
+  ['zibragroup.png', 'https://www.zibrawireless.dk/'],
+  [
+    'koebenhavns-kommune.png',
+    'https://www.kk.dk/indhold/kultur-og-projektstoette'
+  ]
 ]
 export default () => (
   <div className="wrapper">
@@ -35,7 +38,9 @@ export default () => (
     <div className="sponsers">
       {sponsers.map((s, idx) => (
         <div className="sponser" key={idx}>
-          <img src={'/static/sponsers/' + s} />
+          <a href={s[1]}>
+            <img src={'/static/sponsers/' + s[0]} />
+          </a>
         </div>
       ))}
     </div>
