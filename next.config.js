@@ -7,6 +7,7 @@ module.exports = {
       '/contact': { page: '/contact' },
       '/learn': { page: '/learn' },
       '/mentors': { page: '/mentors' },
+      '/partners': { page: '/partners' },
       '/support-us': { page: '/support-us' }
     }
   }
