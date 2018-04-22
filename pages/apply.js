@@ -14,12 +14,25 @@ Want to apply? Please fill in your details below and we will contact you about t
 `
 export default () => (
   <Layout>
+    <style jsx>
+      {`
+        .image {
+          position: relative;
+          left: -20px;
+          right: -20px;
+          width: calc(100% + 40px);
+          max-width: none;
+        }
+      `}
+    </style>
     <Head>
       <title>Apply - HackYourFuture Copenhagen</title>
     </Head>
     <Content>
       <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
-      <Apply email={'kevin.simper@gmail.com'} />
+      <img className="image" src="https://i.imgur.com/ukKK09t.jpg" />
+      <h2>Fill out and apply</h2>
+      <Apply email={'christopher@hackyourfuture.net'} />
     </Content>
   </Layout>
 )
