@@ -3,7 +3,8 @@ module.exports = {
     return {
       '/': { page: '/' },
       '/about': { page: '/about' },
-      '/learn': { page: '/learn' }
+      '/learn': { page: '/learn' },
+      '/contact': { page: '/contact' }
     }
   }
 }

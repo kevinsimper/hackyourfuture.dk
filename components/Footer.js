@@ -13,9 +13,9 @@ export default () => (
         .links {
           width: 100%;
           min-height: 300px;
-          background: #1F2D3D;
+          background: #1f2d3d;
           background: linear-gradient(to bottom right, #2b3e52, #0f3b6d);
-          color: #FFF
+          color: #fff;
           text-align: center;
           line-height: 300px;
         }

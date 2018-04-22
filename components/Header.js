@@ -10,7 +10,7 @@ export default () => {
             border-bottom: 2px solid #b8c1cb;
             background: white;
             padding: 0 20px;
-            overflow: scroll;
+            overflow: auto;
           }
           .HeaderLink {
             margin: 0 10px;
@@ -39,10 +39,7 @@ export default () => {
         <a href="/learn" className="HeaderLink">
           Learn
         </a>
-        <a
-          href="http://hackyourfuture.net/index#contact"
-          className="HeaderLink"
-        >
+        <a href="/contact" className="HeaderLink">
           Contact
         </a>
       </div>
