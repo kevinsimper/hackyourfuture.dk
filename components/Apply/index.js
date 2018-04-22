@@ -43,7 +43,7 @@ export default ({ email }) => (
       <input className="input" type="text" name="name" />
     </label>
     <label className="label">
-      Address:
+      Address / Municipality / City:
       <input className="input" type="text" name="address" />
     </label>
     <label className="label">
