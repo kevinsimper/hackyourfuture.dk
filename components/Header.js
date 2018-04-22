@@ -33,7 +33,7 @@ export default () => {
         <a href="/about" className="HeaderLink">
           About
         </a>
-        <a href="http://hackyourfuture.net/apply" className="HeaderLink">
+        <a href="/apply" className="HeaderLink">
           Apply
         </a>
         <a href="/learn" className="HeaderLink">
