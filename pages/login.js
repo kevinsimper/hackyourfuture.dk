@@ -6,7 +6,7 @@ export default class Login extends React.Component {
   constructor() {
     super()
     this.state = {
-      email: 'kevin.simper@gmail.com'
+      email: ''
     }
   }
   handleLogin() {
@@ -38,16 +38,37 @@ export default class Login extends React.Component {
           <title>Login</title>
         </Head>
         <Content>
-          <div>Login</div>
-          <input
-            type="email"
-            name="email"
-            onChange={event => {
-              this.setState({ email: event.target.value })
-            }}
-            value={this.state.email}
-          />
-          <button onClick={() => { this.handleLogin() }}>Login</button>
+          <style jsx>{`
+            .email {
+              width: 100%;
+              max-width: 300px;
+              font-size: 1.4rem;
+            }
+            button {
+              font-size: 1.4rem;
+              background: #2ecc40;
+              color: white;
+              padding: 10px 20px;
+              margin: 10px 0 0;
+              border: none;
+            }
+          `}</style>
+          <h2>Login</h2>
+          <label>
+            <div>Email:</div>
+            <input
+              className='email'
+              type="email"
+              name="email"
+              onChange={event => {
+                this.setState({ email: event.target.value })
+              }}
+              value={this.state.email}
+            />
+          </label>
+          <div>
+            <button onClick={() => { this.handleLogin() }}>Login</button>
+          </div>
           <script src="https://sdk.accountkit.com/en_US/sdk.js" />
           <script
             dangerouslySetInnerHTML={{
