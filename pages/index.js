@@ -59,7 +59,7 @@ export default () => {
             background-repeat: no-repeat;
             background-size: 200%;
             height: 50vw;
-            max-height: 50vh;
+            max-height: 450px;
             min-height: 300px;
           }
           @media (min-width: 768px) {

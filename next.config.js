@@ -8,7 +8,8 @@ module.exports = {
       '/learn': { page: '/learn' },
       '/mentors': { page: '/mentors' },
       '/partners': { page: '/partners' },
-      '/support-us': { page: '/support-us' }
+      '/support-us': { page: '/support-us' },
+      '/login': { page: '/login' }
     }
   }
 }
