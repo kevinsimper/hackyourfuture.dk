@@ -1,14 +1,8 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import Content from '../components/Content'
-
-const getApi = () => {
-  if(window.location.hostname === 'hackyourfuture.dk') {
-    return 'https://tdla96bnzi.execute-api.eu-central-1.amazonaws.com/production'
-  } else {
-    return 'http://localhost:3001'
-  }
-}
+import { getApi } from '../services/api'
+import Router from 'next/router'
 
 export default class Login extends React.Component {
   constructor() {
@@ -30,7 +24,6 @@ export default class Login extends React.Component {
     if (response.status === 'PARTIALLY_AUTHENTICATED') {
       var code = response.code
       var csrf = response.state
-      console.log(`${getApi()}/login`)
       fetch(`${getApi()}/login`, {
         method: 'POST',
         headers: {
@@ -40,8 +33,8 @@ export default class Login extends React.Component {
       })
         .then(res => res.json())
         .then(body => {
-          window.ACCESS_TOKEN = body.token
-          alert('loggedin')
+          window.localStorage.ACCESS_TOKEN = body.token
+          Router.push('/dashboard')
         }).catch(e => console.log(e))
       // Send code to server to exchange for access token
     } else if (response.status === 'NOT_AUTHENTICATED') {
