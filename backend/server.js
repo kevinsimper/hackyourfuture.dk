@@ -21,7 +21,12 @@ app.get('/', (req, res) => {
 })
 
 const generateToken = accountkit => {
-  return jwt.sign({id: accountkit.email}, API_SECRET)
+  return jwt.sign({
+    user_access_token: accountkit.user_access_token,
+    refresh_interval: accountkit.refresh_interval,
+    user_id: accountkit.user_id,
+    email: accountkit.email
+  }, API_SECRET)
 }
 
 app.post('/login', (req, res) => {
