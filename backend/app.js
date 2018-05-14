@@ -56,7 +56,6 @@ app.post('/login', (req, res) => {
       resp,
       respBody
     ) {
-      console.log(respBody)
       // send login_success.html
       if (respBody.phone) {
         accountkit.phone_num = respBody.phone.number
