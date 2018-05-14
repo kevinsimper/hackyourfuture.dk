@@ -18,33 +18,42 @@ app.get('/', (req, res) => {
   res.send('Hi Backend')
 })
 
-app.get('/login', (req, res) => {
-  const app_access_token = ['AA', app_id, app_secret].join('|')
+app.post('/login', (req, res) => {
   const params = {
     grant_type: 'authorization_code',
-    code: req.params.code,
+    code: req.body.code,
     access_token: app_access_token
-  };
-  var token_exchange_url = token_exchange_base_url + '?' + Querystring.stringify(params);
-  Request.get({url: token_exchange_url, json: true}, function(err, resp, respBody) {
+  }
+  var token_exchange_url =
+    token_exchange_base_url + '?' + Querystring.stringify(params)
+  Request.get({ url: token_exchange_url, json: true }, function(
+    err,
+    resp,
+    respBody
+  ) {
     var view = {
       user_access_token: respBody.access_token,
-      expires_at: respBody.expires_at,
-      user_id: respBody.id,
-    };
+      refresh_interval: respBody.token_refresh_interval_sec,
+      user_id: respBody.id
+    }
 
     // get account details at /me endpoint
-    var me_endpoint_url = me_endpoint_base_url + '?access_token=' + respBody.access_token;
-    Request.get({url: me_endpoint_url, json:true }, function(err, resp, respBody) {
+    var me_endpoint_url =
+      me_endpoint_base_url + '?access_token=' + respBody.access_token
+    Request.get({ url: me_endpoint_url, json: true }, function(
+      err,
+      resp,
+      respBody
+    ) {
       // send login_success.html
       if (respBody.phone) {
-        view.phone_num = respBody.phone.number;
+        view.phone_num = respBody.phone.number
       } else if (respBody.email) {
-        view.email_addr = respBody.email.address;
+        view.email_addr = respBody.email.address
       }
       res.send(view)
-    });
-  });
+    })
+  })
 })
 
 const { PORT = 3001 } = process.env
