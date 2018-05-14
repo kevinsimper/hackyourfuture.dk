@@ -69,6 +69,11 @@ app.post('/login', (req, res) => {
   })
 })
 
+app.post('/graphql', (req, res) => {
+  const decoded = jwt.verify(req.headers.authorization.split(' ')[1], API_SECRET)
+  res.send(decoded)
+})
+
 const { PORT = 3001 } = process.env
 app.listen(PORT, () => {
   console.log('Listening on', PORT)
