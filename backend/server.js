@@ -3,6 +3,7 @@ const cors = require('cors')
 const Querystring = require('querystring')
 const Request = require('request')
 const bodyParser = require('body-parser')
+const jwt = require('jsonwebtoken')
 let app = express()
 const account_kit_api_version = 'v1.0'
 const app_id = process.env.FB_APP_ID
@@ -10,6 +11,7 @@ const app_secret = process.env.FB_APP_SECRET
 const app_access_token = ['AA', app_id, app_secret].join('|')
 const me_endpoint_base_url = 'https://graph.accountkit.com/v1.0/me'
 const token_exchange_base_url = 'https://graph.accountkit.com/v1.0/access_token'
+const { API_SECRET = 'keyboardcat' } = process.env
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -17,6 +19,10 @@ app.use(cors())
 app.get('/', (req, res) => {
   res.send('Hi Backend')
 })
+
+const generateToken = accountkit => {
+  return jwt.sign({id: accountkit.email}, API_SECRET)
+}
 
 app.post('/login', (req, res) => {
   const params = {
@@ -31,7 +37,7 @@ app.post('/login', (req, res) => {
     resp,
     respBody
   ) {
-    var view = {
+    var accountkit = {
       user_access_token: respBody.access_token,
       refresh_interval: respBody.token_refresh_interval_sec,
       user_id: respBody.id
@@ -45,13 +51,16 @@ app.post('/login', (req, res) => {
       resp,
       respBody
     ) {
+      console.log(respBody)
       // send login_success.html
       if (respBody.phone) {
-        view.phone_num = respBody.phone.number
+        accountkit.phone_num = respBody.phone.number
       } else if (respBody.email) {
-        view.email_addr = respBody.email.address
+        accountkit.email = respBody.email.address
       }
-      res.send(view)
+      res.send({
+        token: generateToken(accountkit)
+      })
     })
   })
 })
