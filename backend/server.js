@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const Querystring = require('querystring')
 const Request = require('request')
+const bodyParser = require('body-parser')
 let app = express()
 const account_kit_api_version = 'v1.0';
 const app_id = '2001073706809465';
@@ -9,6 +10,8 @@ const app_secret = process.env.APP_SECRET;
 const me_endpoint_base_url = 'https://graph.accountkit.com/v1.0/me';
 const token_exchange_base_url = 'https://graph.accountkit.com/v1.0/access_token';
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cors())
 app.get('/', (req, res) => {
   res.send('Hi Backend')
