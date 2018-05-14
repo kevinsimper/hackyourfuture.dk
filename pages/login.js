@@ -2,6 +2,14 @@ import Head from 'next/head'
 import Layout from '../components/Layout'
 import Content from '../components/Content'
 
+const getApi = () => {
+  if(window.location.hostname === 'hackyourfuture.dk') {
+    return 'http://example.com'
+  } else {
+    return 'http://localhost:3001'
+  }
+}
+
 export default class Login extends React.Component {
   constructor() {
     super()
@@ -13,21 +21,32 @@ export default class Login extends React.Component {
     console.log('Logging in!', this.state.email)
     AccountKit.login(
       'EMAIL',
-      {emailAddress: this.state.email},
+      { emailAddress: this.state.email },
       this.loginCallback
-    );
+    )
   }
   loginCallback(response) {
     console.log(response.status)
-    if (response.status === "PARTIALLY_AUTHENTICATED") {
-      var code = response.code;
-      var csrf = response.state;
+    if (response.status === 'PARTIALLY_AUTHENTICATED') {
+      var code = response.code
+      var csrf = response.state
+      console.log(`${getApi()}/login`)
+      fetch(`${getApi()}/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ code })
+      })
+        .then(res => res.json())
+        .then(body => {
+          window.ACCESS_TOKEN = body.token
+          alert('loggedin')
+        }).catch(e => console.log(e))
       // Send code to server to exchange for access token
-    }
-    else if (response.status === "NOT_AUTHENTICATED") {
+    } else if (response.status === 'NOT_AUTHENTICATED') {
       // handle authentication failure
-    }
-    else if (response.status === "BAD_PARAMS") {
+    } else if (response.status === 'BAD_PARAMS') {
       // handle bad parameters
     }
   }
@@ -57,7 +76,7 @@ export default class Login extends React.Component {
           <label>
             <div>Email:</div>
             <input
-              className='email'
+              className="email"
               type="email"
               name="email"
               onChange={event => {
@@ -67,7 +86,13 @@ export default class Login extends React.Component {
             />
           </label>
           <div>
-            <button onClick={() => { this.handleLogin() }}>Login</button>
+            <button
+              onClick={() => {
+                this.handleLogin()
+              }}
+            >
+              Login
+            </button>
           </div>
           <script src="https://sdk.accountkit.com/en_US/sdk.js" />
           <script
