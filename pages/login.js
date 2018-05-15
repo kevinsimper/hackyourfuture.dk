@@ -11,6 +11,11 @@ export default class Login extends React.Component {
       email: ''
     }
   }
+  componentDidMount() {
+    if(window.location.hostname === 'hackyourfuture.dk' && window.location.protocol === 'http:') {
+      window.location.href = "https://hackyourfuture.dk/login/"
+    }
+  }
   handleLogin() {
     console.log('Logging in!', this.state.email)
     AccountKit.login(
