@@ -15,7 +15,10 @@ const { API_SECRET = 'keyboardcat' } = process.env
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors())
+app.use(cors({
+  allowedHeaders: ['Content-Type', 'Authorization']
+}))
+app.options('*', cors())
 app.get('/', (req, res) => {
   res.send('Hi Backend')
 })
