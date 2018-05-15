@@ -9,7 +9,9 @@ module.exports = {
       '/mentors': { page: '/mentors' },
       '/partners': { page: '/partners' },
       '/support-us': { page: '/support-us' },
-      '/login': { page: '/login' }
+      '/login': { page: '/login' },
+      '/dashboard': { page: '/dashboard' },
+      '/privacy': { page: '/privacy' },
     }
   }
 }
