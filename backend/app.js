@@ -1,9 +1,12 @@
+require('dotenv-safe').config()
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const loginRoutes = require('./src/routes/login')
 let app = express()
 const { API_SECRET = 'keyboardcat' } = process.env
+const { admin } = require('./src/services/firebase')
+var db = admin.firestore()
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
