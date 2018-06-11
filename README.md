@@ -6,7 +6,13 @@ This is a node.js project based on next.js that compiles to a static site that i
 
 1. Git clone the website
    
-`git clone git@github.com:kevinsimper/hackyourfuture.dk.git`
+```
+git clone git@github.com:kevinsimper/hackyourfuture.dk.git
+```
 
-2. `npm install`
-3. `npm run dev`
+Go into either folder `frontend` or `backend`
+```
+npm install
+```
+
+Then look into `package.json` to find the right commands to start it.
