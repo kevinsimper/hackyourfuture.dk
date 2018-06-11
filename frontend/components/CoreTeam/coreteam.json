@@ -1,6 +1,5 @@
 [
     {
-        "id": "001",
         "name": "Christopher Klüter",
         "role": "Director",
         "email": "christopher@hackyourfuture.net",
@@ -8,7 +7,6 @@
         "photo": "https://imgur.com/Lj29FDP.jpg"
     },
     {
-        "id": "002",
         "name": "Marie Hoff",
         "role": "Public Affairs",
         "email": "marie@hackyourfuture.net",
