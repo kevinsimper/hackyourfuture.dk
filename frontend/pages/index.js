@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import CoreTeam from './../components/CoreTeam';
+import CoreTeam from './../components/CoreTeam'
 import Team from '../components/Team/'
 import Layout from '../components/Layout'
 import Content from '../components/Content'
