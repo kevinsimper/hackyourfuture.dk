@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import CoreTeam from './../components/CoreTeam'
 import Team from '../components/Team/'
 import Layout from '../components/Layout'
 import Content from '../components/Content'
@@ -91,7 +92,9 @@ export default () => {
           />
         </div>
       </div>
-      <h2 style={{ textAlign: 'center' }}>The team</h2>
+      <h2 style={{ textAlign: 'center' }}>Core Team</h2>
+      <CoreTeam />
+      <h2 style={{ textAlign: 'center' }}>Mentors</h2>
       <Team />
     </Layout>
   )
