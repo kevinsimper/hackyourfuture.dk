@@ -1,0 +1,18 @@
+[
+    {
+        "id": "001",
+        "name": "Christopher Klüter",
+        "role": "Director",
+        "email": "christopher@hackyourfuture.net",
+        "linkedin": "https://www.linkedin.com/in/christopher-kl%C3%BCter-26794643/",
+        "photo": "https://imgur.com/Lj29FDP.jpg"
+    },
+    {
+        "id": "002",
+        "name": "Marie Hoff",
+        "role": "Public Affairs",
+        "email": "marie@hackyourfuture.net",
+        "linkedin": "https://www.linkedin.com/in/marie-hoff/",
+        "photo": "https://imgur.com/sK7RHV4.jpg"
+    }
+]
