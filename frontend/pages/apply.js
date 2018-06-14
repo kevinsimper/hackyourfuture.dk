@@ -32,7 +32,7 @@ export default () => (
       <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
       <img className="image" src="https://i.imgur.com/ukKK09t.jpg" />
       <h2>Fill out and apply</h2>
-      <Apply email={'christopher@hackyourfuture.net'} />
+      <Apply email={'cph@hackyourfuture.net'} />
     </Content>
   </Layout>
 )

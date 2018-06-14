@@ -10,7 +10,7 @@ let content = `
 
 Feel to contact us about anything, we always happy to chat!
 
-<a href="mailto:christopher@hackyourfuture.net">christopher@hackyourfuture.net</a>
+<a href="mailto:cph@hackyourfuture.net">cph@hackyourfuture.net</a>
 
 or use the contact form below
 
@@ -22,7 +22,7 @@ export default () => (
     </Head>
     <Content>
       <div dangerouslySetInnerHTML={{ __html: marked(content) }} />
-      <Contactform email={'christopher@hackyourfuture.net'} />
+      <Contactform email={'cph@hackyourfuture.net'} />
       <div style={{ marginTop: 40 }}>
         <Map />
       </div>
