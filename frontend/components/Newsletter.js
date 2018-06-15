@@ -33,17 +33,19 @@ export default () => (
       We will send a monthly update on the project and what new cool things we
       are doing at HackYourFuture.
     </div>
-    <input
-      type="email"
-      name="EMAIL"
-      className="email"
-      placeholder="you@example.com"
-    />
-    <input
-      type="submit"
-      value="Subscribe"
-      name="subscribe"
-      className="submit"
-    />
+    <div className="submit-form">
+      <input
+        type="email"
+        name="EMAIL"
+        className="email"
+        placeholder="you@example.com"
+      />
+      <input
+        type="submit"
+        value="Subscribe"
+        name="subscribe"
+        className="submit"
+      />
+    </div>
   </form>
 )

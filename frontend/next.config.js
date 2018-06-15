@@ -12,6 +12,7 @@ module.exports = {
       '/login': { page: '/login' },
       '/dashboard': { page: '/dashboard' },
       '/privacy': { page: '/privacy' },
+      '/newsletter': { page: '/newsletter' },
     }
   }
 }

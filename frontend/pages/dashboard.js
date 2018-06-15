@@ -16,15 +16,17 @@ export default class Dashboard extends React.Component {
     fetch(`${getApi()}/graphql`, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + window.localStorage.ACCESS_TOKEN
+        Authorization: 'Bearer ' + window.localStorage.ACCESS_TOKEN
       },
       method: 'POST'
-    }).then(res => res.json()).then(body => {
-      this.setState({
-        user: body,
-        loading: false
-      })
     })
+      .then(res => res.json())
+      .then(body => {
+        this.setState({
+          user: body,
+          loading: false
+        })
+      })
   }
   render() {
     return (

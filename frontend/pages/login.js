@@ -12,8 +12,11 @@ export default class Login extends React.Component {
     }
   }
   componentDidMount() {
-    if(window.location.hostname === 'hackyourfuture.dk' && window.location.protocol === 'http:') {
-      window.location.href = "https://hackyourfuture.dk/login/"
+    if (
+      window.location.hostname === 'hackyourfuture.dk' &&
+      window.location.protocol === 'http:'
+    ) {
+      window.location.href = 'https://hackyourfuture.dk/login/'
     }
   }
   handleLogin() {
@@ -40,7 +43,8 @@ export default class Login extends React.Component {
         .then(body => {
           window.localStorage.ACCESS_TOKEN = body.token
           Router.push('/dashboard')
-        }).catch(e => console.log(e))
+        })
+        .catch(e => console.log(e))
       // Send code to server to exchange for access token
     } else if (response.status === 'NOT_AUTHENTICATED') {
       // handle authentication failure
