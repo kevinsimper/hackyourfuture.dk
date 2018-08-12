@@ -52,8 +52,8 @@ export default () => {
           }
           .Background {
             background: linear-gradient(
-                rgba(255, 0, 0, 0.35),
-                rgba(255, 0, 0, 0.55)
+                rgba(0, 0, 0, 0.35),
+                rgba(0, 0, 0, 0.55)
               ),
               url(https://images.unsplash.com/photo-1515518554912-63b4da53597d?ixlib=rb-0.3.5…EyMDd9&s=bbe35f4…&auto=format&fit=crop&w=2850&q=80);
             background-size: contain;
