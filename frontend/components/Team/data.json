@@ -30,12 +30,6 @@
     "github": "https://github.com/Rassibassi"
   },
   {
-    "name": "Veselin Ivanov",
-    "photo": "https://i.imgur.com/cYZPXEu.jpg",
-    "linkedin": "",
-    "github": ""
-  },
-  {
     "name": "Pachito Marco Calabrese",
     "photo": "https://avatars1.githubusercontent.com/u/1509241?s=460&v=4",
     "linkedin": "https://www.linkedin.com/in/pmcalabrese/",
@@ -52,12 +46,6 @@
     "photo": "https://i.imgur.com/rq6WNi2.jpg",
     "linkedin": "https://www.linkedin.com/in/marta-matos-829a7050/",
     "github": "https://github.com/martamatos"
-  },
-  {
-    "name": "Nynne Just Christofferson",
-    "photo": "https://i.imgur.com/EwbPr66.jpg",
-    "linkedin": "https://www.linkedin.com/in/nynne-just-christoffersen-0361a316/",
-    "github": "https://github.com/nynnejc/"
   },
   {
     "name": "Pankaj Kumar Singh",
@@ -90,8 +78,8 @@
     "github": ""
   },
   {
-    "name": "Nerijus Gudas",
-    "photo": "https://i.imgur.com/EJxfDFp.jpg",
+    "name": "Fehime Seven",
+    "photo": "",
     "linkedin": "",
     "github": ""
   },
@@ -108,27 +96,45 @@
     "github": ""
   },
   {
-    "name": "Pasquale Colaianni",
-    "photo": "",
-    "linkedin": "",
-    "github": "https://github.com/pasqoo"
-  },
-  {
     "name": "Jakub Cioslowski",
     "photo": "",
     "linkedin": "",
-    "github": "http://github.com/jakub-c/"
+    "github": "https://github.com/jakub-c/"
   },
   {
-    "name": "Eskil Petersson",
-    "photo": "https://i.imgur.com/NY77Hco.jpg",
-    "linkedin": "",
-    "github": ""
+    "name": "Ahmed Magdy",
+    "photo": "https://avatars1.githubusercontent.com/u/14139855?s=400&u=b070e4c61cab4383c2868400aadb7bf5de3fa45d&v=4",
+    "linkedin": "https://www.linkedin.com/in/a-magdy/",
+    "github": "https://github.com/a-magdy"
   },
   {
-    "name": "Daniel Fernandes",
+    "name": "Petru Catana",
+    "photo": "https://media.licdn.com/dms/image/C4D03AQEsK5ZbI2RS0A/profile-displayphoto-shrink_200_200/0?e=1534982400&v=beta&t=seGhYEUbI_jz9E1hlM3MNWrfRw6nYwV8Saoiskz6WL4",
+    "linkedin": "https://www.linkedin.com/in/petru-catana-3151a268/",
+    "github": "https://github.com/pcatana"
+  },
+  {
+    "name": "Marci Papineau",
     "photo": "",
-    "linkedin": "https://www.linkedin.com/in/danielapfernandes/",
+    "linkedin": "https://www.linkedin.com/in/marcidenmark/",
+    "github": "https://github.com/marcidenmark"
+  },
+  {
+    "name": "Mikael Wistoft-Ibsen",
+    "photo": "",
+    "linkedin": "",
+    "github": "https://github.com/wistoft"
+  },
+  {
+    "name": "Emil Bay",
+    "photo": "https://avatars2.githubusercontent.com/u/416524?s=460&v=4",
+    "linkedin": "https://www.linkedin.com/in/emilbayes/",
+    "github": "https://github.com/emilbayes"
+  },
+  {
+    "name": "Oliver Thomsen",
+    "photo": "",
+    "linkedin": "",
     "github": ""
   }
 ]
