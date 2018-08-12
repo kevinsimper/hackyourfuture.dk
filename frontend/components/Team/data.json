@@ -48,6 +48,12 @@
     "github": "https://github.com/martamatos"
   },
   {
+    "name": "Nynne Just Christofferson",
+    "photo": "https://i.imgur.com/EwbPr66.jpg",
+    "linkedin": "https://www.linkedin.com/in/nynne-just-christoffersen-0361a316/",
+    "github": "https://github.com/nynnejc/"
+  },
+  {
     "name": "Pankaj Kumar Singh",
     "photo": "https://avatars0.githubusercontent.com/u/432980?s=460&v=4",
     "linkedin": "https://dk.linkedin.com/in/pankaj28843",
@@ -114,14 +120,8 @@
     "github": "https://github.com/pcatana"
   },
   {
-    "name": "Marci Papineau",
-    "photo": "",
-    "linkedin": "https://www.linkedin.com/in/marcidenmark/",
-    "github": "https://github.com/marcidenmark"
-  },
-  {
     "name": "Mikael Wistoft-Ibsen",
-    "photo": "",
+    "photo": "https://i.imgur.com/9kJRICy.png",
     "linkedin": "",
     "github": "https://github.com/wistoft"
   },
@@ -130,11 +130,5 @@
     "photo": "https://avatars2.githubusercontent.com/u/416524?s=460&v=4",
     "linkedin": "https://www.linkedin.com/in/emilbayes/",
     "github": "https://github.com/emilbayes"
-  },
-  {
-    "name": "Oliver Thomsen",
-    "photo": "",
-    "linkedin": "",
-    "github": ""
   }
 ]
