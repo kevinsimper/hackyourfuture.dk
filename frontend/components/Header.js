@@ -23,8 +23,9 @@ export default () => {
             text-decoration: underline;
           }
           .logo {
-            height: 40px;
+            height: 60px;
             margin-right: 30px;
+            display: block;
           }
           .navigation {
             display: none;
@@ -46,7 +47,9 @@ export default () => {
           }
         `}
       </style>
-      <img src="/static/hackyourfuture.png" className="logo" />
+      <a href="/">
+        <img src="/static/hackyourfuture-logo-white.png" className="logo" />
+      </a>
       <div className="navigation">
         {links.map((link, key) => (
           <a href={link[1]} className="HeaderLink" key={key}>
