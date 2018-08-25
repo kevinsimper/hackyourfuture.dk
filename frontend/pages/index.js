@@ -50,6 +50,9 @@ export default () => {
             text-align: center;
             padding: 50px;
           }
+          .logo img {
+            max-height: 200px;
+          }
           .Background {
             background: linear-gradient(
                 rgba(0, 0, 0, 0.35),
@@ -72,7 +75,7 @@ export default () => {
       </style>
       <div className="Background">
         <div className="logo">
-          <img src="/static/hackyourfuture.png" style={{ height: 200 }} />
+          <img src="/static/hackyourfuture.png" />
         </div>
       </div>
       <Content>
